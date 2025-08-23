@@ -119,7 +119,7 @@ class Book
     if books_not_linked_with_library
       books = books_not_linked_with_library.map { |book| [book[:id],book[:title], book[:author]] }
       table = Terminal::Table.new(title: "Books Which Are Not Stored In The library", headings: ['Id', 'Title', 'Author'], rows: books)
-      # puts "there are #{books.count} Books Are Not Stored In the Library \n #{table}\n\nAnd #{Library.all&.count}Library"
+
       puts table, "\n\n"
       puts "Enter The Book Id to Store in the library"
 
